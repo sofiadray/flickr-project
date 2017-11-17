@@ -1,6 +1,5 @@
 export function getPhotos(searchText) {
-
-	const url = "https://api.flickr.com/services/rest?method=flickr.photos.search&media=photos&sort=interestingness-desc&text=" + searchText + "&tags=" + searchText + "&format=json&nojsoncallback=1&per_page=4&api_key=74b5fd2cc0348a150be1220fbb38d43c"
+	const url = "https://api.flickr.com/services/rest?method=flickr.photos.search&media=photos&sort=interestingness-desc&text=" + searchText + "&tags=" + searchText + "&format=json&nojsoncallback=1&per_page=4&api_key=" + process.env.FLICKR_API_KEY
 	if (searchText.length > 0 && searchText !== undefined) {
 		return fetch(url, {
 			headers: {

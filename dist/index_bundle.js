@@ -9168,9 +9168,9 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.getPhotos = getPhotos;
+var key = "74b5fd2cc0348a150be1220fbb38d43c";
 function getPhotos(searchText) {
-
-	var url = "https://api.flickr.com/services/rest?method=flickr.photos.search&media=photos&sort=interestingness-desc&text=" + searchText + "&tags=" + searchText + "&format=json&nojsoncallback=1&per_page=4&api_key=74b5fd2cc0348a150be1220fbb38d43c";
+	var url = "https://api.flickr.com/services/rest?method=flickr.photos.search&media=photos&sort=interestingness-desc&text=" + searchText + "&tags=" + searchText + "&format=json&nojsoncallback=1&per_page=4&api_key=" + key;
 	if (searchText.length > 0 && searchText !== undefined) {
 		return fetch(url, {
 			headers: {}
@@ -9194,6 +9194,41 @@ function getPhotos(searchText) {
 		});
 	}
 }
+
+// export function getPhotos(searchText) {
+// 	var Flickr = require("flickrapi");
+// 	var flickrOptions = {
+// 	      api_key: "74b5fd2cc0348a150be1220fbb38d43c",
+// 	      secret: "a7dae6af8c64dad2"
+// 	  	};
+
+// 	if (searchText.length > 0 && searchText !== undefined) {
+// 		Flickr.tokenOnly(flickrOptions, function (error, flickr) {
+// 			flickr.photos.search({
+// 			  text: searchText,
+// 			  tags: searchText,
+// 			  media: "photos",
+// 			  sort: "interestingness-desc",
+// 			  format: "json",
+// 			  per_page: "4",
+// 			  nojsoncallback: "1"
+// 			}, function(err, response) {
+// 					  if (err) { 
+// 					  	console.log(err);
+// 					  }
+// 					//   return response.json().then((data) => {
+// 				 //    	var photos = data.photos.photo;
+// 				 //    	// Build list of individual Flickr urls
+// 					// 	var urls = []
+// 				 //    	photos.forEach((el)=> {
+// 			  //   			urls.push("https://farm" + el.farm + ".staticflickr.com/" + el.server + "/" + el.id + "_" + el.secret + ".jpg")
+// 			  //   		});
+// 			  //   		return urls
+// 					// });
+// 		});
+// 		}
+// 	}
+// }
 
 /***/ })
 /******/ ]);

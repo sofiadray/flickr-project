@@ -2,6 +2,7 @@ const path = require('path');
 const APP_DIR = path.resolve(__dirname, '/client');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './client/index.html',
   filename: 'index.html',
@@ -28,5 +29,10 @@ module.exports = {
       },
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    HtmlWebpackPluginConfig,
+    new webpack.DefinePlugin({
+        'process.env.FLICKR_API_KEY': JSON.stringify(process.env.FLICKR_API_KEY)
+      }),
+  ]
 }

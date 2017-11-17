@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render jumbo correctly 1`] = `
+<div
+  className="jumbotron-container"
+>
+  <div
+    className="arrow"
+    style={
+      Object {
+        "float": "left",
+      }
+    }
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-angle-left fa-5x"
+      onClick={undefined}
+    />
+  </div>
+  <div
+    className="jumbotron-main"
+    style={
+      Object {
+        "height": "500px",
+      }
+    }
+  >
+    <img
+      alt="no results"
+      src="mockURL"
+      style={
+        Object {
+          "maxHeight": "450px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="arrow"
+    style={
+      Object {
+        "float": "right",
+      }
+    }
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-angle-right fa-5x"
+      onClick={undefined}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render thumb correctly 1`] = `
+<div
+  className="thumbnail"
+>
+  <img
+    alt="result #01"
+    onClick={[Function]}
+    src="anotherMockURL"
+    style={
+      Object {
+        "boxSizing": "border-box",
+        "float": "left",
+        "maxHeight": "150px",
+        "padding": ".5em",
+        "textAlign": "center",
+      }
+    }
+  />
+</div>
+`;
